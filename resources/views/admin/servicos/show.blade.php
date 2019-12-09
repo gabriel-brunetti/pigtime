@@ -72,6 +72,8 @@
             {{-- BOTÃO CANDIDATAR-SE --}}
             @if (Auth::user()->id == $servico->id_dono)
                 <a class="w-100 m-t-10 btn btn-md btn-primary align-self-end" href="/servicos/{{ $servico->id }}/edit">Editar</a>
+            @elseif (Auth:: user()->id = $servico->id_prestador)
+            <a href="{{ url('/servicos') }}" class="w-100 m-t-10 btn btn-md btn-primary align-self-end disabled">Candidatura Aprovada</a>
             @elseif (Auth::user()->id != $servico->id_dono && $servico->candidatos->contains('id',Auth::user()->id))
                 <a href="{{ url('/servicos') }}" class="w-100 m-t-10 btn btn-md btn-primary align-self-end disabled">Candidatura Enviada</a>
             @elseif (Auth::user()->id != $servico->id_dono)
@@ -100,14 +102,14 @@
                             {{-- DESCRICAO  --}}
                             <small class="text-white font-light"><br>Veja quem mostrou interesse no seu anúncio</small>
                         </div>
-                        @foreach ($servico->candidatos as $servico->prestador)
+                        @foreach ($servico->candidatos as $prestador)
                             {{-- CANDIDATOS --}}
                             <div class="card-body weather-small">
                                 <div class="row d-flex m-b-10">
                                     {{-- FOTO DO USUARIO --}}
-                                    <a href="{{ url('/user') }}"><img src="{{ url($candidato->url_img) }}" alt="user" class="m-l-20" style="width: 50px; border-radius: 100%;"></a>
+                                    <a href="{{ url('/user') }}"><img src="{{ url($prestador->url_img) }}" alt="user" class="m-l-20" style="width: 50px; border-radius: 100%;"></a>
                                     {{-- NOME DO USUARIO --}}
-                                    <h5 class="my-0 py-0 m-l-10 card-title align-self-center"><a href="{{ url('/user') }}" class="link">{{ $candidato->nome . ' ' . $candidato->sobrenome }}</a> </h5>
+                                    <h5 class="my-0 py-0 m-l-10 card-title align-self-center"><a href="{{ url('/user') }}" class="link">{{ $prestador->nome . ' ' . $prestador->sobrenome }}</a> </h5>
                                 </div>
                                 <div class="row d-flex m-b-10 m-l-40 justify-content-around">
                                     {{-- BOTÃO APROVAR --}}
@@ -115,7 +117,7 @@
                                         @csrf
                                         @method('put')
                                         <button type="submit" class="btn btn-primary" style="margin-right:4px"> Aprovar</button>
-                                        <input type="hidden" name="id_prestador" value="{{ $candidato->id }}">
+                                        <input type="hidden" name="id_prestador" value="{{ $prestador->id }}">
                                     </form>
                                     {{-- BOTÃO REPROVAR --}}
                                     <a href="#" class="btn btn-danger">Reprovar</a></div>

@@ -20,7 +20,7 @@ class usersTableSeeder extends Seeder
         $u->rg = '17843047-8';
         $u->cpf = '150308820-06';
         $u->sexo = 'm';
-        $u->email = 'sergiodhh@hotmail.com';
+        $u->email = 'sergiodh@hotmail.com';
         $u->password = Hash::make('12345678');
         $u->endereco = 'Rua Sao Francisco';
         $u->numero = '862';

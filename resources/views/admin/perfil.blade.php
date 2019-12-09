@@ -11,7 +11,7 @@
             </div>
         <div class="col-md-7 col-4 align-self-center">
             <a href="{{ url('/servicos/create') }}" class="mx-3 btn waves-effect waves-light btn-danger pull-right hidden-sm-down"> Anunciar serviço</a>
-            <a href="{{ url('/servicos/create') }}" class="btn waves-effect waves-light btn-danger pull-right hidden-sm-down"> {{ Auth::user()->saldo }}</a>
+            <a href="{{ url('/servicos/create') }}" class="btn waves-effect waves-light btn-danger pull-right hidden-sm-down"> {{ Auth::user()->saldo }} Horas</a>
         </div>
     </div>    
 @endsection

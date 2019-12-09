@@ -22,8 +22,8 @@ Route::get('/cadastrar', function(){
 });
 
 Route::get('/login', function() {
-	return view('login');
-});
+	return view('admin.perfil');
+})->middleware('auth');
 
 Route::get('/perfil', function(){
 	return view('admin.perfil');
