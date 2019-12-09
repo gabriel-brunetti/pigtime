@@ -14,7 +14,7 @@ class servicosTableSeeder extends Seeder
     {
         $s = new Servico();
         
-        $s->nome = '1';
+        $s->nome = 'Passear com Cachorro';
         $s->descricao = 'Tenho um labrador de 50kg ele ama correr e morder o dono';
         $s->CEP = '01307-000';
         $s->endereco = 'Rua Frei Caneca';
@@ -34,8 +34,8 @@ class servicosTableSeeder extends Seeder
 
         $s = new Servico();
         
-        $s->nome = '2';
-        $s->descricao = 'Tenho um labrador';
+        $s->nome = 'Regar Jardim';
+        $s->descricao = 'Vou viajar preciso de alguém para regar o jardim de casa';
         $s->CEP = '01307-000';
         $s->endereco = 'Rua Frei Caneca';
         $s->numero = '444';
@@ -54,8 +54,8 @@ class servicosTableSeeder extends Seeder
 
         $s = new Servico();
         
-        $s->nome = '3';
-        $s->descricao = 'Tenho um labrador de 50kg ele ama correr e morder o dono ASUDKAHKWDUHASKUDHAKSUDHAKSUDHAIWUDHASKJDHKAUWDKSUHDKAWUDHKASUHDSKAUh';
+        $s->nome = 'Pintar Parede';
+        $s->descricao = 'Tenho que pintar a parede do meu quarto, preciso de ajuda';
         $s->CEP = '01307-000';
         $s->endereco = 'Rua Frei Caneca';
         $s->numero = '444';
@@ -74,8 +74,8 @@ class servicosTableSeeder extends Seeder
 
         $s = new Servico();
         
-        $s->nome = '4';
-        $s->descricao = 'Tenho um labrador de 50kg ele ama correr e morder o dono';
+        $s->nome = 'Fazer almoço';
+        $s->descricao = 'Vou receber amigos em casa preciso de ajuda para fazer um almoço para 10 pessoas';
         $s->CEP = '01307-000';
         $s->endereco = 'Rua Frei Caneca';
         $s->numero = '444';
@@ -94,8 +94,8 @@ class servicosTableSeeder extends Seeder
 
         $s = new Servico();
         
-        $s->nome = '5';
-        $s->descricao = 'Tenho um labrador de 50kg ele ama correr e morder o dono UHASDHKASHDKASUhkaushdkasuhdKUSDHKASUHDKASUHDKASUHDKASUHDKASUHDKUASHDKUASH';
+        $s->nome = 'Passear com Pug';
+        $s->descricao = 'Quebrei o pé, preciso de alguém para passear com meu cahcorro';
         $s->CEP = '01307-000';
         $s->endereco = 'Rua Frei Caneca';
         $s->numero = '444';
@@ -114,8 +114,8 @@ class servicosTableSeeder extends Seeder
 
         $s = new Servico();
         
-        $s->nome = 'Passear com cachorro Grande';
-        $s->descricao = 'Tenho um labrador';
+        $s->nome = 'Desmontar armário';
+        $s->descricao = 'Preciso desmontar um armário e preciso de ajuda';
         $s->CEP = '01307-000';
         $s->endereco = 'Rua Frei Caneca';
         $s->numero = '444';
